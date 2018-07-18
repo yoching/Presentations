@@ -3,24 +3,18 @@ slidenumbers: true
 
 ## App Architecture by Manual DI
 ### <br><br>@yoshikuni_kato
-#### Swift愛好会 vol23<br>2017/09/20
+#### Tokyo iOS meetup<br>2018/07/20
 
 ---
 # Who am I ?
 
-![right 300%](images/250x250_green.png)
+![right fit](images/2017Portrait.jpg)
 
-- Yoshikuni Kato（加藤由訓） [@yoshikuni_kato](https://twitter.com/yoshikuni_kato)
-- iOS Engineer（2.5 years）
-- Yahoo! Japan -> OHAKO
-- Radi-Hey →
-
----
-# Presentation at iOSDC 2017 [^1]
-
-![inline](images/iosdc.png)
-
-[^1]: https://speakerdeck.com/yoching/guan-shu-woyin-shu-tositedu-sushu-kifang-falsepointo
+- Yoshikuni Kato（加藤由訓）
+- iOS Engineer（3.5 years）
+- Yahoo! Japan -> OHAKO -> Pangea
+- Twitter: [@yoshikuni_kato](https://twitter.com/yoshikuni_kato)
+- GitHub: [@yoching](https://github.com/yoching)
 
 ---
 # Self Introduction - Interests
@@ -38,16 +32,15 @@ slidenumbers: true
   - Custom Transition
 
 ---
-# Self Introduction - Few experiences
-
-- Older OS
-- Objective-C
-- Maintenance / Operation
-- DB Management
-- CoreAnimation / CoreGraphics
+## App Architecture by Manual DI
 
 ---
-## App Architecture by Manual DI
+# Agenda
+
+1. Coordinator pattern
+1. Inspirations
+1. Architecture
+1. How it changed the development flow?
 
 ---
 # Sample Code
@@ -57,7 +50,22 @@ slidenumbers: true
 [^2]: https://github.com/yoching/iOSAppArchitectureSample
 
 ---
-# Past Architecture
+# Coordinator pattern [^3]
+
+- Basic idea: extract transition logics from VC
+  (do not write `present(UIViewController)`, `pushViewController` **inside** UIViewController)
+- Objects to handle transition = Coordinator
+- View Controllers can be isolated each other -> DI friendly
+- Other names: Router (in VIPER), Wireframe, Navigation, ...
+
+
+<!-- - With this pattern, View Controllers can be isolated each other -> Dependency Injection -->
+
+[^3]: [Managing view transitions & MVVM](https://speakerdeck.com/yoching/hua-mian-qian-yi-falseguan-li-tomvvm).
+
+
+<!-- ---
+# Coordinator: a way to isolate views
 
 - MVVM-C
   - 画面遷移の管理とMVVM [^3]
@@ -65,15 +73,20 @@ slidenumbers: true
 
 [^3]: https://speakerdeck.com/yoching/hua-mian-qian-yi-falseguan-li-tomvvm
 
-[^4]: https://speakerdeck.com/yoching/coordinatorpatanfalseshi-jian
+[^4]: https://speakerdeck.com/yoching/coordinatorpatanfalseshi-jian -->
 
----
+<!-- ---
 ![inline](./images/mvvmc.png)
 
-https://speakerdeck.com/yoching/hua-mian-qian-yi-falseguan-li-tomvvm
+https://speakerdeck.com/yoching/hua-mian-qian-yi-falseguan-li-tomvvm -->
 
 ---
-# Past Architecture Problems
+![inline](./images/CoordinatorStructure.png)
+
+
+
+---
+# Coordinator Problems
 
 - 2 tasks in Coordinator
  - View Transition
@@ -83,13 +96,12 @@ https://speakerdeck.com/yoching/hua-mian-qian-yi-falseguan-li-tomvvm
 - cannot replace with stub objects
 
 ---
-
 # Inspirations
 
 - Minimizing Decision Fatigue to Improve Team Productivity @ try! swift 2017 [^5]
   - **Application / UI / Components** (Project Organization)
-- 依存性の注入（Dependency Injection)  @ wikipedia [^6]
-  - **手動でのDI** / 自動的なDI
+- Dependency Injection  @ wikipedia [^6]
+  - Manual DI / Automatic DI (DI container)
 - Deep Linking at Kickstarter @ SwiftTalk [^7]
   - *Routing* logics
 
@@ -102,7 +114,6 @@ https://speakerdeck.com/yoching/hua-mian-qian-yi-falseguan-li-tomvvm
 
 
 ---
-
 # Architecture
 
 ![inline fill](./images/Architecture.png)

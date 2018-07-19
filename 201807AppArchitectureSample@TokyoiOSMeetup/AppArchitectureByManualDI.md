@@ -81,7 +81,7 @@ slidenumbers: true
 https://speakerdeck.com/yoching/hua-mian-qian-yi-falseguan-li-tomvvm -->
 
 ---
-![inline](./images/CoordinatorStructure.png)
+![inline](./images/CoordinatorExample.png)
 
 
 

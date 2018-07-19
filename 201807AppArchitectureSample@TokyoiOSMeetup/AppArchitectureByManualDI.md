@@ -99,7 +99,14 @@ slidenumbers: true
 
 - yoching/iOSAppArchitectureSample [^1]
 
-- yoching/JSONPlaceholderViewer [^7] more practical sample using ReactiveSwift
+---
+# More Practical sample
+
+- yoching/JSONPlaceholderViewer [^7]
+
+  - persistance using CoreData
+  - networking
+  - ReactiveSwift
 
 [^7]: https://github.com/yoching/JSONPlaceholderViewer
 
@@ -122,3 +129,95 @@ slidenumbers: true
 
 ---
 # Thank you!
+
+---
+# Connecting View Controllers [^8]
+
+```swift
+let nc = window?.rootViewController as! UINavigationController
+let episodesVC = nc.viewControllers[0] as! EpisodesViewController
+
+let storyboard = UIStoryboard(name: "Main", bundle: nil)
+
+episodesVC.didSelect = { episode in
+    let detailVC = storyboard.instantiateViewControllerWithIdentifier("Detail")
+                       as! DetailViewController
+    detailVC.episode = episode
+    nc.pushViewController(detailVC, animated: true)
+}
+```
+
+- presentation logics are **outside** of view controller
+
+[^8]: https://talk.objc.io/episodes/S01E05-connecting-view-controllers
+
+---
+# Coordinator Pattern [^2] [^3]
+
+- Objects to handle transition = Coordinator
+- View Controllers can be isolated each other -> DI friendly
+- Other names: Router (in VIPER), Wireframe, Navigation, ...
+
+<!-- - Problem: 2 responsibilities (View Transition & View Creation) -->
+
+<!-- - With this pattern, View Controllers can be isolated each other -> Dependency Injection -->
+
+[^2]: https://speakerdeck.com/yoching/hua-mian-qian-yi-falseguan-li-tomvvm
+
+[^3]: https://speakerdeck.com/yoching/coordinatorpatanfalseshi-jian
+
+---
+# More commonized way
+
+```swift
+// in ViewController
+enum EpisodesRoute {
+    case detail(Episode)
+}
+protocol EpisodesRouting: class {
+    var routeSelected: ((EpisodesRoute) -> Void)? { get set }
+}
+class EpisodesViewController: UIViewController, EpisodesRouting {
+    var routeSelected: ((EpisodesRoute) -> Void)?
+}
+
+// in Coordinator
+episodesVC.routeSelected = { route in
+    switch route {
+    case .detail(let episode):
+        // present detail
+    }
+}
+```
+
+---
+![inline](./images/CoordinatorExample.png)
+
+---
+# Coordinator Pattern problems
+
+- 2 tasks in Coordinator
+ - view transition
+ - view creation
+
+- lots of dependencies
+
+---
+# Goal
+
+- All dependencies are injected from outside
+
+- Coordinator doesn't do view creation
+
+- Organized project
+
+
+---
+# Goal
+
+- All dependencies are injected from outside
+  -> make Dependency Management Object
+- Coordinator doesn't do view creation
+  -> make `ViewFactory`, `CoordinatorFactory`
+- Organized project
+  -> Application / UI / Component

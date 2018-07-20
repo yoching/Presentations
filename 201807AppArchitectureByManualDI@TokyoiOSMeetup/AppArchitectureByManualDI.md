@@ -1,9 +1,9 @@
 autoscale: true
 slidenumbers: true
 
-## App Architecture by<br>Manual Dependency Injection
+## App Architecture by Manual DI
 ### <br><br>@yoshikuni_kato
-#### Tokyo iOS meetup<br>2018/07/20
+#### Tokyo iOS meetup<br>2018/07/21
 
 ---
 # Who am I ?

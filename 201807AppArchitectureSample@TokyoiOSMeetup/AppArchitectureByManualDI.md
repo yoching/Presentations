@@ -1,7 +1,7 @@
 autoscale: true
 slidenumbers: true
 
-## App Architecture by Manual DI
+## App Architecture by<br>Manual Dependency Injection
 ### <br><br>@yoshikuni_kato
 #### Tokyo iOS meetup<br>2018/07/20
 
@@ -21,117 +21,20 @@ slidenumbers: true
 # Agenda
 
 1. Coordinator Pattern
-1. Inspirations
-1. Architecture
-1. How it changed the development flow?
+1. Goals
+1. Architecture Sample
+
+^ share architecture that I considered and used in production apps at my previous company
+
+^ feedbacks if possible
 
 ---
-# Sample Code
+# Coordinator Pattern
 
-- yoching/iOSAppArchitectureSample [^1]
-
-[^1]: https://github.com/yoching/iOSAppArchitectureSample
+^ This is not a main topic of this presentation, but I need extra explanation.
 
 ---
-# Coordinator Pattern [^2] [^3]
-
-- Basic idea: extract transition logics from VC
-  (do not write `present(UIViewController)`, `pushViewController` **inside** UIViewController)
-- Objects to handle transition = Coordinator
-- View Controllers can be isolated each other -> DI friendly
-- Other names: Router (in VIPER), Wireframe, Navigation, ...
-
-
-<!-- - With this pattern, View Controllers can be isolated each other -> Dependency Injection -->
-
-[^2]: https://speakerdeck.com/yoching/hua-mian-qian-yi-falseguan-li-tomvvm
-
-[^3]: https://speakerdeck.com/yoching/coordinatorpatanfalseshi-jian
-
----
-![inline](./images/CoordinatorExample.png)
-
----
-# Problems of this pattern
-
-- 2 tasks in Coordinator
- - View Transition
- - Dependency Injection
-
-- hard to test
-- cannot replace with stub objects
-
----
-# Inspirations
-
-- Minimizing Decision Fatigue to Improve Team Productivity @ try! swift 2017 [^4]
-  - **Application / UI / Components** (Project Organization)
-- Dependency Injection  @ wikipedia [^5]
-  - Manual DI / Automatic DI (DI container)
-- Deep Linking at Kickstarter @ SwiftTalk [^6]
-  - *Routing* logics
-
-
-[^4]: https://www.slideshare.net/DerekLee/minimizing-decision-fatigue-to-improve-team-productivity
-
-[^5]: https://ja.wikipedia.org/wiki/%E4%BE%9D%E5%AD%98%E6%80%A7%E3%81%AE%E6%B3%A8%E5%85%A5
-
-[^6]: https://talk.objc.io/episodes/S01E49-deep-linking-at-kickstarter
-
-
----
-# Architecture
-
-![inline fill](./images/Architecture.png)
-
----
-# 2 Types of Objects
-
-- Runtime Objects
-  - several objects for app runtime
-  - testable (all dependencies are injected)
-- Dependency Management
-  - doing Dependency Injection
-  - no need to test (like setting file)
-
----
-# Sample Projects
-
-- yoching/iOSAppArchitectureSample [^1]
-
----
-# More Practical sample
-
-- yoching/JSONPlaceholderViewer [^7]
-
-  - persistance using CoreData
-  - networking
-  - ReactiveSwift
-
-[^7]: https://github.com/yoching/JSONPlaceholderViewer
-
----
-# Development Workflow
-
-| situation | workflow |
-| --- | --- |
-| make service | make service<br>-> update `components` |
-| make view | make VC & VM <br>-> make function at `ViewFactory` |
-| make transition | update `coordinator` |
-
----
-# Result
-
-- Coordinator: only view transition
-- Factory & Components: Dependency Injection
-- No Singleton😄
-- *App / Components / UI* is good for object organizing (not only folder structures)
-
----
-# Thank you!
-
----
-# Connecting View Controllers [^8]
+# Connecting View Controllers [^1]
 
 ```swift
 let nc = window?.rootViewController as! UINavigationController
@@ -147,20 +50,18 @@ episodesVC.didSelect = { episode in
 }
 ```
 
-- presentation logics are **outside** of view controller
+- transition logics are **outside** of view controller
 
-[^8]: https://talk.objc.io/episodes/S01E05-connecting-view-controllers
+[^1]: https://talk.objc.io/episodes/S01E05-connecting-view-controllers
+
+^ not using segue
 
 ---
 # Coordinator Pattern [^2] [^3]
 
-- Objects to handle transition = Coordinator
+- Objects to handle view controller transition = Coordinator
 - View Controllers can be isolated each other -> DI friendly
 - Other names: Router (in VIPER), Wireframe, Navigation, ...
-
-<!-- - Problem: 2 responsibilities (View Transition & View Creation) -->
-
-<!-- - With this pattern, View Controllers can be isolated each other -> Dependency Injection -->
 
 [^2]: https://speakerdeck.com/yoching/hua-mian-qian-yi-falseguan-li-tomvvm
 
@@ -190,6 +91,10 @@ episodesVC.routeSelected = { route in
 }
 ```
 
+(inspired by "Deep Linking at Kickstarter" @ SwiftTalk [^4])
+
+[^4]: https://talk.objc.io/episodes/S01E49-deep-linking-at-kickstarter
+
 ---
 ![inline](./images/CoordinatorExample.png)
 
@@ -198,26 +103,123 @@ episodesVC.routeSelected = { route in
 
 - 2 tasks in Coordinator
  - view transition
- - view creation
+ - view controller creation
 
 - lots of dependencies
 
 ---
-# Goal
-
-- All dependencies are injected from outside
-
-- Coordinator doesn't do view creation
-
-- Organized project
-
+# Goals
 
 ---
-# Goal
+# Goals
 
 - All dependencies are injected from outside
-  -> make Dependency Management Object
+   　
+- Coordinator doesn't do view controller creation
+   　
+- Project is well organized
+    　
+
+---
+# Goals
+
+- All dependencies are injected from outside
+  -> Manual DI [^5]
 - Coordinator doesn't do view creation
-  -> make `ViewFactory`, `CoordinatorFactory`
-- Organized project
-  -> Application / UI / Component
+  -> using `ViewFactory`, `CoordinatorFactory`
+- Project is well organized
+  -> Application / UI / Component [^6]
+
+[^5]: https://ja.wikipedia.org/wiki/%E4%BE%9D%E5%AD%98%E6%80%A7%E3%81%AE%E6%B3%A8%E5%85%A5
+
+[^6]: Minimizing Decision Fatigue to Improve Team Productivity @ try! swift 2017, https://www.slideshare.net/DerekLee/minimizing-decision-fatigue-to-improve-team-productivity
+
+^ Using DI container / libraries is called Automatic DI
+
+^ Manual DI is controllable (like handling singleton)
+
+^ *App / Components / UI* is good not only folder structures, but also for object organization
+
+---
+# Architecture Sample
+
+---
+# Sample Code
+
+- yoching/iOSAppArchitectureSample [^7]
+
+[^7]: https://github.com/yoching/iOSAppArchitectureSample
+
+^ App behavior
+^ Application / Components / UI
+^ Components
+^ View (MVVM & MVC), Routing, ViewFactory
+^ Coordinator, CoordinatorFactory
+^ AppDependencies
+
+---
+# Figure
+
+![inline fill](./images/Architecture.png)
+
+^ right column objects are not testable (almost setting file)
+
+^ because of it, left objects are testable (all dependencies are injected)
+
+---
+# Development Workflow
+
+| situation | workflow |
+| --- | --- |
+| make service | make service<br>-> update `Components` |
+| make view | make VC & VM <br>-> make function at `ViewFactory` |
+| make transition | update `Coordinator` |
+
+<!-- ---
+# Result
+
+- Coordinator: only view transition
+- Factory & Components: Dependency Injection
+- No Singleton😄
+- *App / Components / UI* is good for object organizing (not only folder structures) -->
+
+---
+# More Practical Sample
+
+- yoching/JSONPlaceholderViewer [^8]
+
+  - persistance using CoreData
+  - networking
+  - ReactiveSwift
+
+[^8]: https://github.com/yoching/JSONPlaceholderViewer
+
+---
+# Discussions
+
+- Over engineered?
+- Dependency management objects = DI container?
+
+---
+# Thank you!
+### <br><br>@yoshikuni_kato
+
+<!--
+---
+# Inspirations
+
+- Minimizing Decision Fatigue to Improve Team Productivity @ try! swift 2017 [^4]
+  - **Application / UI / Components** (Project Organization)
+- Dependency Injection  @ wikipedia [^5]
+  - Manual DI / Automatic DI (DI container)
+- Deep Linking at Kickstarter @ SwiftTalk [^6]
+  - *Routing* logics
+
+
+[^4]: https://www.slideshare.net/DerekLee/minimizing-decision-fatigue-to-improve-team-productivity
+
+[^5]: https://ja.wikipedia.org/wiki/%E4%BE%9D%E5%AD%98%E6%80%A7%E3%81%AE%E6%B3%A8%E5%85%A5
+
+[^6]: https://talk.objc.io/episodes/S01E49-deep-linking-at-kickstarter
+
+ -->

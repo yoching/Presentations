@@ -203,23 +203,3 @@ episodesVC.routeSelected = { route in
 ---
 # Thank you!
 ### <br><br>@yoshikuni_kato
-
-<!--
----
-# Inspirations
-
-- Minimizing Decision Fatigue to Improve Team Productivity @ try! swift 2017 [^4]
-  - **Application / UI / Components** (Project Organization)
-- Dependency Injection  @ wikipedia [^5]
-  - Manual DI / Automatic DI (DI container)
-- Deep Linking at Kickstarter @ SwiftTalk [^6]
-  - *Routing* logics
-
-
-[^4]: https://www.slideshare.net/DerekLee/minimizing-decision-fatigue-to-improve-team-productivity
-
-[^5]: https://ja.wikipedia.org/wiki/%E4%BE%9D%E5%AD%98%E6%80%A7%E3%81%AE%E6%B3%A8%E5%85%A5
-
-[^6]: https://talk.objc.io/episodes/S01E49-deep-linking-at-kickstarter
-
- -->

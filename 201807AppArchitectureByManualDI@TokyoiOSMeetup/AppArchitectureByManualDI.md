@@ -125,7 +125,7 @@ episodesVC.routeSelected = { route in
 
 - All dependencies are injected from outside
   -> Manual DI [^5]
-- Coordinator doesn't do view creation
+- Coordinator doesn't do view controller creation
   -> using `ViewFactory`, `CoordinatorFactory`
 - Project is well organized
   -> Application / UI / Component [^6]

@@ -20,7 +20,7 @@ slidenumbers: true
 ---
 # Agenda
 
-Swiftエンジニアとして、チェコの現地企業で働くことになったので、転職の体験をシェアします。
+Swiftエンジニアとして、チェコの現地企業で働くことになったので、転職の体験をシェアします
 <br>
 
 - 海外転職について（便利なツール等含め）
@@ -117,11 +117,11 @@ Swiftエンジニアとして、チェコの現地企業で働くことになっ
 # 応募するか考える
 
 - 会社を知る
-  - Glassdoor: 英語圏だと定番っぽい。企業側が点の高さをアピールしていることも。
+  - Glassdoor: 英語圏だと定番っぽい。企業側が点の高さをアピールしていることも
 
 - 場所を知る
-  - Nomad List: 生活費、居住環境等の比較サイト。眺めるだけで楽しい。
-  - Relocate.me: 移住情報（ビザ、税金、住居等）が充実。
+  - Nomad List: 生活費、居住環境等の比較サイト
+  - Relocate.me: 移住情報（ビザ、税金、住居等）が充実
 
 ---
 ![fit](./images/Glassdoor.png)
@@ -145,28 +145,32 @@ Swiftエンジニアとして、チェコの現地企業で働くことになっ
   1. 最終面接（マネージャー等）
 
 ---
-# 採用フロー - 技術テスト
-- アプリの仕様とデザインが与えられて、それを作る
-  - 数画面
-  - APIアクセス
-  - Locationなど (おそらくAppleのFrameworkの使用例として)
-  - Database
-- 評価するポイント等は会社によって違う
-  - テスタビリティを重視する場合
-  - UI実装が重視される場合
+# 技術テスト
+
+- アプリを作る課題
+- 仕様とデザインが与えられる
+  - 2~3画面, APIアクセス, Location, Database, ...
+- 評価するポイント等は会社による
+  - テスタビリティ重視
+  - UI実装重視
   - ...
 
 ---
-# 採用フロー - 技術テスト例
+# 技術テスト - 例
 
-GitHub等でテストを公開している企業もある
+GitHub等で公開されている技術テスト
 
 - https://github.com/Babylonpartners/iOS-Interview-Demo
 - https://github.com/AckeeCZ/cookbook-ios-task
 
+---
+![fit](./images/babylon.png)
 
 ---
-# 採用フロー - 技術面接例
+![fit](./images/ackee.png)
+
+---
+# 技術面接 - 質問例
 
 - 開発手法
   - Scrum/Agile, スプリントのフロー
@@ -176,7 +180,7 @@ GitHub等でテストを公開している企業もある
   - DI
 
 ---
-# 採用フロー - 技術面接例、iOS関連
+# 技術面接 - iOSの質問例
 
 - Swift
 - Database
@@ -186,7 +190,7 @@ GitHub等でテストを公開している企業もある
 - 新しいライブラリ（ARKit, CoreML, ...）
 
 ---
-# 採用フロー - 経験に関する質問
+# 経験に関する質問例
 
 - Work you're most proud of / 一番誇りに思っている仕事
 - Biggest challenges, difficulties / 今までで一番チャレンジングだった仕事
@@ -203,10 +207,10 @@ GitHub等でテストを公開している企業もある
 
 - Pramp (https://www.pramp.com)
 - 面接の練習を行う2人がマッチングされる
-- 1回使用したが、とてもいい練習になった。
-- Qiita記事[^5]で知った
+- 1回使用したが、とてもいい練習になった
+- Qiita記事[^3]で知った
 
-[^5]: 英語のコーディング面接 (React) を受けた感想、やっておけば良かったと思ったことなど, https://qiita.com/acro5piano/items/df53d695c84db83061da
+[^3]: 英語のコーディング面接 (React) を受けた感想、やっておけば良かったと思ったことなど, https://qiita.com/acro5piano/items/df53d695c84db83061da
 
 <!-- ---
 # その他、ツール
@@ -214,12 +218,6 @@ GitHub等でテストを公開している企業もある
   - 予定合わせツール
   - スロットを選ぶ（時差が考慮されている）→ GoogleCalendarに自動で予定登録
 - Google Hangout -->
-
-<!-- ---
-# 便利そうなサービス
-  - 面接練習のやつ
-  - relocate.me
-  - Nomad List -->
 
 <!-- ---
 # 就労ビザについて
@@ -272,9 +270,9 @@ strvは、フリーランスビザを取ってそれで契約する。
 # 海外の会社を探すのは大変 - 3
 
 - その他
-  - 受託事業だと、クライアントと直で話をするので、より英語力が求められる
   - ビザや移住のサポートがあるか
   - 未踏の地に行くのは不安
+  - 英語力（特に受託開発の場合）
   - 応募したのに返信来ない
 
 <br>
@@ -284,14 +282,14 @@ strvは、フリーランスビザを取ってそれで契約する。
 ---
 # 効果的だったこと
 
-- LinkedInの充実
+- LinkedInのProfileを整理する
 - 英語でアウトプットしておく
-  - Tokyo iOS meetup[^3]での発表の動画[^4]を、会社の人が見てくれていた
+  - Tokyo iOS meetup[^4]での発表の動画[^5]を、会社の人が見てくれていた
   - SpeakerDeckの英語資料も
 
-[^3]: https://www.meetup.com/TokyoiOSMeetup/
+[^4]: https://www.meetup.com/TokyoiOSMeetup/
 
-[^4]: https://www.youtube.com/watch?v=Z3tiYtq5oio
+[^5]: https://www.youtube.com/watch?v=Z3tiYtq5oio
 
 <!-- ---
 # 英語について
@@ -336,6 +334,19 @@ strvは、フリーランスビザを取ってそれで契約する。
 <!-- - 人口：10,369,000人 -->
 
 ---
+# プラハ
+
+![right](./images/PragueStreet.jpeg)
+
+- 「美しい街」
+- 景色のいい公園多い
+  - 外で🍺飲んだら気持ちよさそう
+- 外国人増えているらしい
+- 冬は厳しい　→
+  - 寒い
+  - 日照時間短い
+
+---
 # チェコ - IT
 
 <!-- ![inline](./images/avast.png)![inline](./images/jetbrains.png)
@@ -349,19 +360,6 @@ strvは、フリーランスビザを取ってそれで契約する。
 # Mobile Dev Conferences
 
 ![inline](./images/mDevTalk.png)![inline](./images/mDevCamp.png)
-
----
-# プラハ
-
-![right](./images/PragueStreet.jpeg)
-
-- 「美しい街」
-- 景色のいい公園多い
-  - 外で🍺飲んだら気持ちよさそう
-- 外国人増えているらしい
-- 冬は厳しい　→
-  - 寒い
-  - 日照時間短い
 
 ---
 # STRV
@@ -390,7 +388,8 @@ strvは、フリーランスビザを取ってそれで契約する。
 
 - プラハで働きたい人Welcome!
 - チェコ＆プラハ情報あったら教えてください🙇🏻‍♂️
-  - Web系の日本人エンジニア/デザイナー、本当に見つからない・・・（ベルリンにはたくさんいるのに・・・）
+
+^ - Web系の日本人エンジニア/デザイナー、本当に見つからない・・・（ベルリンにはたくさんいるのに・・・）
 
 ---
 # Thank you!🇨🇿

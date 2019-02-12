@@ -12,7 +12,7 @@ slidenumbers: true
 
 - Yoshikuni Kato（加藤由訓）
 - iOS Engineer（4 years）
-- Yahoo! Japan -> OHAKO -> Pangea <br>    -> STRV (in Czechia)
+- Yahoo! Japan -> OHAKO -> Pangea <br>    -> STRV (in Czech Republic)
 - Twitter: [@yoshikuni_kato](https://twitter.com/yoshikuni_kato)
 - GitHub: [@yoching](https://github.com/yoching)
 - Interests: Software Design, FRP (ReactiveSwift), UI Implementation

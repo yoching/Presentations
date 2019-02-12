@@ -12,7 +12,7 @@ slidenumbers: true
 
 - Yoshikuni Kato（加藤由訓）
 - iOS Engineer（4 years）
-- Yahoo! Japan -> OHAKO -> Pangea <br>    -> strv (in Czechia)
+- Yahoo! Japan -> OHAKO -> Pangea <br>    -> STRV (in Czechia)
 - Twitter: [@yoshikuni_kato](https://twitter.com/yoshikuni_kato)
 - GitHub: [@yoching](https://github.com/yoching)
 - Interests: Software Design, FRP (ReactiveSwift), UI Implementation
@@ -160,7 +160,7 @@ Swiftエンジニアとして、チェコの現地企業で働くことになっ
 
 GitHub等で公開されている技術テスト
 
-- https://github.com/Babylonpartners/iOS-Interview-Demo
+- https://github.com/Babylonpartners/ios-playbook/blob/master/Interview/demo.md
 - https://github.com/AckeeCZ/cookbook-ios-task
 
 ---
@@ -196,9 +196,9 @@ GitHub等で公開されている技術テスト
 - 新しいライブラリ（ARKit, CoreML, ...）
 
 
-(Babylonの採用情報ページ[^3]を参考にするといいかも)
+（かなりレベル高いですが、babylonの採用情報ページ[^3]を参考にするといいかも）
 
-[^3]: https://github.com/Babylonpartners/iOS-Interview-Demo/blob/master/questions.md
+[^3]: https://github.com/Babylonpartners/ios-playbook/blob/master/Interview/questions.md
 
 ---
 ![fit](./images/BabylonQuestions.png)
@@ -208,7 +208,7 @@ GitHub等で公開されている技術テスト
 
 - Work you're most proud of / 一番誇りに思っている仕事
 - Biggest challenges, difficulties / 今までで一番チャレンジングだった仕事
-- どういうポジションを探しているか
+- What are you looking for in your next role? / どういうポジションを探しているか
 - Strength & weakness / 強みと弱み
 - What motivates you? / 何があるとモチベーションが上がるか
 

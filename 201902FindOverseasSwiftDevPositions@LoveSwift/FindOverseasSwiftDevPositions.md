@@ -3,7 +3,7 @@ slidenumbers: true
 
 ## Swiftエンジニアが<br>海外のポジションに応募する
 ### <br><br>@yoshikuni_kato
-#### Swift愛好会<br>2019/02/12
+#### Swift愛好会 vol38 @レバレジーズ<br>2019/02/12
 
 ---
 # Who am I ?
@@ -170,6 +170,12 @@ GitHub等で公開されている技術テスト
 ![fit](./images/ackee.png)
 
 ---
+# 技術面接
+
+- 技術テストのフィードバック、議論
+- 開発に関する質問
+
+---
 # 技術面接 - 質問例
 
 - 開発手法
@@ -188,6 +194,14 @@ GitHub等で公開されている技術テスト
 - Foundation
 - Network
 - 新しいライブラリ（ARKit, CoreML, ...）
+
+
+(Babylonの採用情報ページ[^3]を参考にするといいかも)
+
+[^3]: https://github.com/Babylonpartners/iOS-Interview-Demo/blob/master/questions.md
+
+---
+![fit](./images/BabylonQuestions.png)
 
 ---
 # 経験に関する質問例
@@ -208,9 +222,9 @@ GitHub等で公開されている技術テスト
 - Pramp (https://www.pramp.com)
 - 面接の練習を行う2人がマッチングされる
 - 1回使用したが、とてもいい練習になった
-- Qiita記事[^3]で知った
+- Qiita記事[^4]で知った
 
-[^3]: 英語のコーディング面接 (React) を受けた感想、やっておけば良かったと思ったことなど, https://qiita.com/acro5piano/items/df53d695c84db83061da
+[^4]: 英語のコーディング面接 (React) を受けた感想、やっておけば良かったと思ったことなど, https://qiita.com/acro5piano/items/df53d695c84db83061da
 
 <!-- ---
 # その他、ツール
@@ -282,14 +296,14 @@ strvは、フリーランスビザを取ってそれで契約する。
 ---
 # 効果的だったこと
 
-- LinkedInのProfileを整理する
 - 英語でアウトプットしておく
-  - Tokyo iOS meetup[^4]での発表の動画[^5]を、会社の人が見てくれていた
+  - Tokyo iOS meetup[^5]での発表の動画[^6]を、会社の人が見てくれていた
   - SpeakerDeckの英語資料も
+- LinkedInのProfileを整理する
 
-[^4]: https://www.meetup.com/TokyoiOSMeetup/
+[^5]: https://www.meetup.com/TokyoiOSMeetup/
 
-[^5]: https://www.youtube.com/watch?v=Z3tiYtq5oio
+[^6]: https://www.youtube.com/watch?v=Z3tiYtq5oio
 
 <!-- ---
 # 英語について
@@ -386,6 +400,7 @@ strvは、フリーランスビザを取ってそれで契約する。
 ---
 # 最後に
 
+- 外国で働きたい人の参考になれば
 - プラハで働きたい人Welcome!
 - チェコ＆プラハ情報あったら教えてください🙇🏻‍♂️
 
@@ -393,57 +408,3 @@ strvは、フリーランスビザを取ってそれで契約する。
 
 ---
 # Thank you!🇨🇿
-
-
-<!-- ---
-# 以下ドラフト
-
----
-- 海外で仕事を探すのは予想より大変
-
-    - 企業の感覚が分からない
-    - 語学
-    - 非英語圏
-    - 土地勘
-
-- 狭い選択肢
-    - 受託 & デザインイケてる & あまりコンサル寄りでない
-    - swift only
-    - 海外経験
-
-- 長期計画、少しずつ
-
-- うまく行かなかったケース
-    - Sydney
-    - ロンドンの医療系企業
-    - ヨーロッパの受託会社
-    - 逆指名求人サイト
-    - 転職エージェント
-
-- よく聞かれる質問
-
-- 面接の練習サイト
-
-- 採用フロー
-    - 技術テスト⭐️
-
-- チェコとは
-    - 場所
-    - IT企業
-    - ビール
-    - 言語
-
-
-- strvとは
-
-- "海外"
-
-- 便利そうなサイト、他サービス
-
-- 今後も何が起こるか不明
-
-- 移住
-
-- 他都市の話
-
-- Glassdoor -->

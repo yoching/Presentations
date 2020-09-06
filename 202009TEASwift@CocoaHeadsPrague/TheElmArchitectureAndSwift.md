@@ -109,9 +109,7 @@ TEA = The Elm Architecture
 # WWDC19
 
 - SwiftUI came
-- mixed feelings
-  - this is how it should be (e.g. React)
-  - one year later than expected
+- Yoshi's thought🤔: This is how it should be (e.g. React), but it's one year later than expected.
 
 ---
 # TEA implementation
@@ -376,5 +374,5 @@ var subscriptions: [Subscription<Message>] {
 ---
 # Summary
 
-- We can learn a lot from Elm
+- We can learn a lot from TEA
 - Let's try making enum based actions

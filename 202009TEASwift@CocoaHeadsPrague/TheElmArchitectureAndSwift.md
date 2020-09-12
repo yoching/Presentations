@@ -10,27 +10,27 @@ slidenumbers: true
 
 ![right fit](images/2017Portrait.jpg)
 
-- Yoshikuni Kato（加藤由訓）
+- Yoshikuni Kato
 - iOS Engineer（5+ years）
-- Yahoo! Japan -> OHAKO -> Pangea -> STRV (since 03.2019)
+- (Some companies in Japan) -> STRV (since 03.2019)
 - Twitter: [@yoshikuni_kato](https://twitter.com/yoshikuni_kato)
 - GitHub: [@yoching](https://github.com/yoching)
 - Interests: Functional Programming, Software Design, UI Implementation
 
 ---
 # Agenda
-- Brief history: TEA experiments by Swift developers
+- TEA experiments by Swift developers & me
 - Simple TEA implementation
-- After SwiftUI
+- Architecture After SwiftUI
 
 TEA = The Elm Architecture
 
 
 ---
-## Brief history: <br> TEA experiments by Swift developers
+## TEA experiments by Swift developers & me
 
 ---
-# Brief history: TEA experiments by Swift developers
+# TEA experiments by Swift developers & me
 
 (This is from my perspective)
 
@@ -92,7 +92,7 @@ TEA = The Elm Architecture
 
 - no new UI framework
 - only updates about UIKit
-- Yoshi's thought🤔: Apple won't make a new UI library, they'll stick to UIKit.
+- 🤔Apple won't make a new UI library, they'll stick to UIKit?
 
 
 ---
@@ -109,7 +109,7 @@ TEA = The Elm Architecture
 # WWDC19
 
 - SwiftUI came
-- Yoshi's thought🤔: This is how it should be (e.g. React), but it's one year later than expected.
+- 🤔This is how it should be (e.g. React), but it's one year later than expected.
 
 ---
 # TEA implementation
@@ -117,7 +117,7 @@ TEA = The Elm Architecture
 ---
 # What is Elm & TEA
 - Elm: functional language for web apps
-  - Haskell like
+  - Haskell-inspired syntax
 - The Elm Architecture
   - GUI app architecture for Elm
 
@@ -337,7 +337,7 @@ var subscriptions: [Subscription<Message>] {
 ![inline](images/SwiftUI-Elm-similarity.png)
 
 ---
-# After SwiftUI
+# Architecture After SwiftUI
 
 ---
 # SwiftUI + TEA
@@ -350,10 +350,18 @@ var subscriptions: [Subscription<Message>] {
 - inspired by TEA apparently
 - high quality
 - Effect is very close to Cmd in TEA
-- Yoshi's thought: Finally TEA came to reality. It's no more "experimental" architecture
+- 🙂Finally TEA came to reality. It's no more "experimental" architecture
 
 ---
-# Comparison with other architectures
+# Common factor in new architecture: Enum based actions
+
+- In new architecture, actions are often represented as **types** (usually enum)
+  - e.g.) actions are represented as **functions/methods** in other architectures like MVC, MVVM
+  - easier to test, easier to handle because they are value types
+- Lots of architecture going towards this direction
+
+---
+# Comparison with other architecture
 
 | Architecture | Enum based Action | Virtual View |
 | --- | --- | --- |
@@ -364,15 +372,17 @@ var subscriptions: [Subscription<Message>] {
 | TEA (or TCA) | ✅| ✅|
 
 ---
-# Enum based actions
-
-- In new architectures, actions are represented as **types** (usually enum)
-  - e.g.) actions are represented as **functions/methods** in other architectures like MVC, MVVM
-  - easier to test, easier to handle because they are value types
-- Lots of architectures going towards this direction
-
----
 # Summary
 
 - We can learn a lot from TEA
 - Let's try making enum based actions
+
+---
+# Thank you!
+
+### <br><br>@yoshikuni_kato
+
+---
+# More references
+
+- [Clean Architecture for SwiftUI](https://medium.com/swlh/clean-architecture-for-swiftui-6d6c4eb1cf6a)

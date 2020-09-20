@@ -3,7 +3,7 @@ slidenumbers: true
 
 ## The Elm Architecture & Swift
 ### <br><br>@yoshikuni_kato
-#### CocoaHeads Prague<br>17.09.2020
+#### event and date: TBD
 
 ---
 # Who am I ?
@@ -19,12 +19,36 @@ slidenumbers: true
 
 ---
 # Agenda
+- Why Elm?
 - TEA experiments by Swift developers & me
-- Simple TEA implementation
+- Simple TEA implementation in Swift
 - Architecture After SwiftUI
 
 TEA = The Elm Architecture
 
+---
+# Why Elm?
+
+---
+# What are Elm & TEA?
+- Elm: functional language for web apps
+- The Elm Architecture (TEA)
+  - GUI app architecture for Elm
+
+---
+# SwiftUI & Elm
+
+![right fit](images/SwiftUIAndElm.png)
+
+- SwiftUI resembles Elm
+cf.) Clean Architecture for SwiftUI [^1]
+
+- Both use virtual views
+- Some experiments by Swift developers since 2017
+(longer than SwiftUI)
+- Knowing Elm & TEA brings us insight into SwiftUI
+
+[^1]: https://medium.com/swlh/clean-architecture-for-swiftui-6d6c4eb1cf6a
 
 ---
 ## TEA experiments by Swift developers & me
@@ -43,40 +67,48 @@ TEA = The Elm Architecture
 ---
 # Presentations by Inami, 2017
 
-- Making Elm with Swift, 03.2017
+- Making Elm with Swift, 03.2017 [^2]
 
 ![right fit](images/InamiySwiftElm.png)
+
+[^2]: https://speakerdeck.com/inamiy/swiftdeelmwozuo-ru-japanese
 
 ---
 # Presentations by Inami, 2017
 
-- Elm Architecture in Swift, 05.2017
+- Elm Architecture in Swift, 05.2017 [^3]
 
 ![right fit](images/InamiySwiftElm2.png)
+
+[^3]: https://speakerdeck.com/inamiy/elm-architecture-in-swift
 
 ---
 # Curated list by Inami, 2017
 
-- React & Elm inspired frameworks in Swift
+- React & Elm inspired frameworks in Swift [^4]
 
 ![right fit](images/React&RealmInspiredFrameworks.png)
 
+[^4]: https://gist.github.com/inamiy/bd257c60e670de8a144b1f97a07bacec
+
 ---
-# App Architecture from objc.io, 2018
+# App Architecture from objc.io, 2018 [^5]
 
 - This was released in May 2018.
 
 ![right fit](images/AppArchitecture.png)
 
+[^5]: https://www.objc.io/books/app-architecture/
+
 ---
-# App Architecture from objc.io, 2018
+# App Architecture from objc.io, 2018 [^5]
 
 - The Elm Architecture as an experimental architecture
 
 ![right fit](images/AppArchitectureBookContents.png)
 
 ---
-# App Architecture from objc.io, 2018
+# App Architecture from objc.io, 2018 [^5]
 
 - some Video Contents
 
@@ -99,27 +131,31 @@ TEA = The Elm Architecture
 # My trials to understand TEA
 
 - TEA sample from objc.io was a bit difficult for me to understand. Tried to understand them by making them.
-- yoching/SwiftElmButtonSample
-- yoching/SwiftElmSample2
+- yoching/SwiftElmButtonSample [^6]
+- yoching/SwiftElmSample2 [^7]
 - mostly done in 12.2018
 
 ![right fit](images/YochingElmButtonSample.png)
 
+[^6]: https://github.com/yoching/SwiftElmButtonSample
+
+[^7]: https://github.com/yoching/SwiftElmSample2
+
 ---
 # WWDC19
 
-- SwiftUI came
+- SwiftUI came suddenly
 - 🤔This is how it should be (e.g. React), but it's one year later than expected.
 
 ---
 # TEA implementation
 
----
+<!-- ---
 # What is Elm & TEA
 - Elm: functional language for web apps
   - Haskell-inspired syntax
 - The Elm Architecture
-  - GUI app architecture for Elm
+  - GUI app architecture for Elm -->
 
 <!-- ---
 # Virtual view in Inami's Elm
@@ -326,13 +362,15 @@ var subscriptions: [Subscription<Message>] {
 
 ---
 # Similarities with SwiftUI
-- Data Flow Through SwiftUI @ WWDC19 https://developer.apple.com/videos/play/wwdc2019/226/
+- Data Flow Through SwiftUI @ WWDC19 [^8]
 
 ![inline](images/SwiftUI-Elm-similarity-original.png)
 
+[^8]: https://developer.apple.com/videos/play/wwdc2019/226/
+
 ---
 # Similarities with SwiftUI
-- Data Flow Through SwiftUI @ WWDC19 https://developer.apple.com/videos/play/wwdc2019/226/
+- Data Flow Through SwiftUI @ WWDC19 [^8]
 
 ![inline](images/SwiftUI-Elm-similarity.png)
 
@@ -381,8 +419,3 @@ var subscriptions: [Subscription<Message>] {
 # Thank you!
 
 ### <br><br>@yoshikuni_kato
-
----
-# More references
-
-- [Clean Architecture for SwiftUI](https://medium.com/swlh/clean-architecture-for-swiftui-6d6c4eb1cf6a)
